@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Wireframe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .wireframe-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border: 3px solid #333;
+            padding: 0;
+        }
+        
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            border-bottom: 2px solid #333;
+        }
+        
+        .logo {
+            border: 2px solid #666;
+            padding: 15px 40px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            font-size: 14px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 60px 40px;
+            border-bottom: 2px solid #333;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .hero-image {
+            width: 200px;
+            height: 200px;
+            border: 2px solid #666;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .hero-content {
+            flex: 1;
+        }
+        
+        .hero-heading {
+            font-size: 32px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .cta-button {
+            border: 2px solid #333;
+            padding: 15px 40px;
+            display: inline-block;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 60px 40px;
+            border-bottom: 2px solid #333;
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .about-image {
+            width: 250px;
+            height: 250px;
+            border: 2px solid #666;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .text-line {
+            height: 12px;
+            background: #ddd;
+            margin-bottom: 10px;
+        }
+        
+        /* Portfolio Section */
+        .portfolio {
+            padding: 60px 40px;
+            border-bottom: 2px solid #333;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .portfolio-item {
+            border: 2px solid #666;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 60px 40px;
+            border-bottom: 2px solid #333;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 30px;
+        }
+        
+        .service-item {
+            text-align: center;
+        }
+        
+        .service-icon {
+            width: 120px;
+            height: 120px;
+            border: 2px solid #666;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .service-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        /* Team Section */
+        .team {
+            padding: 60px 40px;
+            border-bottom: 2px solid #333;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 30px;
+        }
+        
+        .team-member {
+            text-align: center;
+        }
+        
+        .team-photo {
+            width: 100px;
+            height: 100px;
+            border: 2px solid #666;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .team-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 60px 40px;
+            border-bottom: 2px solid #333;
+        }
+        
+        .contact-content {
+            display: flex;
+            gap: 40px;
+            margin-top: 30px;
+        }
+        
+        .contact-form {
+            flex: 1;
+        }
+        
+        .form-field {
+            border: 2px solid #666;
+            padding: 15px;
+            margin-bottom: 15px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .form-field.large {
+            height: 100px;
+        }
+        
+        .send-button {
+            border: 2px solid #333;
+            padding: 15px 60px;
+            display: inline-block;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border: 2px solid #666;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+        }
+        
+        /* Map Section */
+        .map {
+            padding: 60px 40px;
+            border-bottom: 2px solid #333;
+        }
+        
+        .map-container {
+            border: 2px solid #666;
+            height: 300px;
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #666;
+            position: relative;
+        }
+        
+        .map-pin {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 32px;
+        }
+        
+        /* Footer */
+        .footer {
+            padding: 30px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="wireframe-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">LOGO / YOUR NAME</div>
+            <div class="nav-links">
+                <span>Home</span> | <span>About</span> | <span>Portfolio</span> | <span>Services</span> | <span>Contact</span>
+            </div>
+        </div>
+        
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="hero-image">PHOTO / BANNER IMAGE</div>
+            <div class="hero-content">
+                <div class="hero-heading">Hi, I'm [Your Name], a Web Developer</div>
+                <div class="text-line" style="width: 80%;"></div>
+                <div class="text-line" style="width: 70%;"></div>
+                <div class="cta-button">HIRE ME / VIEW MY WORK</div>
+            </div>
+        </div>
+        
+        <!-- About Section -->
+        <div class="about">
+            <div style="width: 100%;">
+                <div class="section-title">ABOUT ME / ABOUT US</div>
+                <div style="display: flex; gap: 40px;">
+                    <div class="about-image">PORTRAIT / LOGO</div>
+                    <div class="about-text">
+                        <div class="text-line"></div>
+                        <div class="text-line"></div>
+                        <div class="text-line"></div>
+                        <div class="text-line" style="width: 90%;"></div>
+                        <div class="text-line" style="width: 85%;"></div>
+                        <div class="text-line" style="width: 75%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Portfolio Section -->
+        <div class="portfolio">
+            <div class="section-title">OUR PORTFOLIO / MY PROJECTS</div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">PROJECT 1</div>
+                <div class="portfolio-item">PROJECT 2</div>
+                <div class="portfolio-item">PROJECT 3</div>
+                <div class="portfolio-item">PROJECT 4</div>
+                <div class="portfolio-item">PROJECT 5</div>
+                <div class="portfolio-item">+ MORE</div>
+            </div>
+        </div>
+        
+        <!-- Services Section -->
+        <div class="services">
+            <div class="section-title">OUR SERVICES</div>
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-icon">ICON</div>
+                    <div class="service-title">Web Design</div>
+                    <div class="text-line"></div>
+                    <div class="text-line" style="width: 80%; margin: 10px auto;"></div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">ICON</div>
+                    <div class="service-title">App Development</div>
+                    <div class="text-line"></div>
+                    <div class="text-line" style="width: 80%; margin: 10px auto;"></div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">ICON</div>
+                    <div class="service-title">UI/UX Consulting</div>
+                    <div class="text-line"></div>
+                    <div class="text-line" style="width: 80%; margin: 10px auto;"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Team Section -->
+        <div class="team">
+            <div class="section-title">OUR TEAM</div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="team-photo">FACE</div>
+                    <div class="team-name">Team Member 1</div>
+                    <div style="font-size: 12px; color: #666;">Developer</div>
+                </div>
+                <div class="team-member">
+                    <div class="team-photo">FACE</div>
+                    <div class="team-name">Team Member 2</div>
+                    <div style="font-size: 12px; color: #666;">Designer</div>
+                </div>
+                <div class="team-member">
+                    <div class="team-photo">FACE</div>
+                    <div class="team-name">Team Member 3</div>
+                    <div style="font-size: 12px; color: #666;">Manager</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contact Section -->
+        <div class="contact">
+            <div class="section-title">CONTACT US</div>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <div class="form-field">Name</div>
+                    <div class="form-field">Email</div>
+                    <div class="form-field large">Message</div>
+                    <div class="send-button">SEND</div>
+                    <div class="social-icons">
+                        <div class="social-icon">FB</div>
+                        <div class="social-icon">TW</div>
+                        <div class="social-icon">LI</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Map Section -->
+        <div class="map">
+            <div class="section-title">LOCATION MAP / FIND US</div>
+            <div class="map-container">
+                <div>MAP PLACEHOLDER WITH STREETS</div>
+                <div class="map-pin">📍</div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <div>© 2025 [Your Name or Company Name]</div>
+            <div class="social-icons">
+                <div class="social-icon">FB</div>
+                <div class="social-icon">TW</div>
+                <div class="social-icon">IG</div>
+                <div class="social-icon">LI</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
